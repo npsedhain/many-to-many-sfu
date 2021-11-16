@@ -13,7 +13,7 @@ const userUid = urlParams.get('userUid');
 const sidePartyUid = urlParams.get('sidePartyUid');
 
 const startStream = async () => {
-  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+  const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
   document.getElementById('my-video').srcObject = stream;
 
   const peer = createBroadcastPeer();
